@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    table {
+        border-collapse: separate;
+        border-spacing: 10px;
+        width: 80%;
+        background-color: antiquewhite;
+        margin: auto;
+
+    }
+    th, td {
+        padding: 15px;
+        text-align: center;
+    }
+    .container {
+        transition: border-color 0.3s;
+        width: auto;
+    }
+    .line1:hover, .line2:hover {
+        color: red; 
+    }
+    .line1:hover ~ .line2, .line2:hover ~ .line1 {
+        color: initial;
+    }
+    .line1:hover, .line2:hover {
+        color: red;
+    }
+    .container img {
+        max-width: 30px;
+        max-height: 30px;
+        display: block;
+        margin: 15px;
+    }
+    .div_line1 , .div_line2 {
+        display: flex;
+        align-items: center;
+    }
+    
+    .div_line1 img { 
+        max-width: 10px;
+    }
+    .div_line2 img { 
+        max-width: 120px;
+        margin-right: 10px; 
+    }
+    .sales-info {
+        display: flex;
+        align-items: center;
+    }
+    .sales-info img {
+        max-width: 120px;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+    }
+    .last-td .sales-info {
+        align-items: flex-start; 
+        flex-direction: column; 
+    }
+    .last-td .sales-info img {
+        margin-right: 0;
+    }
+</style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="container">
+                <div class="div_line1">
+                    <img src="check.png" alt="">
+                    <span class="line1">Quy định sử dụng</span>
+                </div>
+                <div class="div_line2">
+                    <img src="iphone.png" alt="">
+                    <span class="line2">Liên hệ kinh doanh</span>
+                </div>
+            </td>
+      
+            <td class="container">
+                <div class="div_line1">
+                    <img src="check.png" alt="">
+                    <span class="line1">Hướng dẫn thanh toán</span>
+                </div>
+                <div class="div_line2">
+                    <img src="iphone.png" alt="">
+                    <span class="line2">Hỗ trợ kỹ thuật</span>
+                </div>
+            </td>
+      
+            <td class="container">
+                <div class="div_line1">
+                    <img src="check.png" alt="">
+                    <span class="line1">Dowanload bảng giá</span>
+                </div>
+                <div class="div_line2">
+                    <img src="iphone.png" alt="">
+                    <span class="line2">Góp ý công ty</span>
+                </div>
+            </td>
+
+            <td class="container last-td"> 
+                <div class="sales-info">
+                    <a class="line2" >Sales 1:</a>
+                    <img src="online.png" alt="">
+                </div>
+                <div class="sales-info">
+                    <a class="line2">Sales 2:</a>
+                    <img src="offline.png" alt="">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

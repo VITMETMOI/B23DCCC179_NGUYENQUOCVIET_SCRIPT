@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgb(19, 167, 14);
+            color: white;
+        }
+        header img {
+            width: 120px;
+            height: 60px;
+        }
+        header input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        nav {
+            text-align: center;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            color: rgb(18, 116, 221);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .container .left,
+        .container .middle,
+        .container .right {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+        .container .left img,
+        .container .right img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .container .middle b,
+        .container .left b {
+            font-size: 20px;
+            color: rgb(18, 116, 221);
+        }
+        .container .middle ul,
+        .container .left ul {
+            margin-top: 0;
+            padding-left: 20px;
+        }
+        .container .middle ul li,
+        .container .left ul li {
+            list-style-type: disc;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="imgs/logo-dan-tri.png" alt="Logo">
+        </div>
+        <div>
+            <input type="text" placeholder="Tìm kiếm tin tức">
+        </div>
+    </header>
+    <nav>
+        <a href="#">Video</a> |
+        <a href="#">Sự kiện</a> |
+        <a href="#">Thế giới</a> |
+        <a href="#">Xã hội</a> |
+        <a href="#">Kinh Doanh</a> |
+        <a href="#">Bất động sản</a> |
+        <a href="#">Thể thao</a> |
+        <a href="#">Việc làm</a> |
+        <a href="#">Sức khỏe</a> |
+        <a href="#">Văn hóa</a> |
+        <a href="#">Giải trí</a> |
+        <a href="#">Xe++</a> |
+        <a href="#">Sức mạnh số</a> |
+        <a href="#">An ninh</a> |
+        <a href="#">Pháp luật</a>
+    </nav>
+    <div class="container">
+        <div class="left">
+            <img src="imgs/anh-2.png" alt="Image 1">
+            <b>Indonesia đang trong "kịch bản tồi tệ nhất", nguy cơ trở thành Án Độ thứ hai</b>
+            <p>(Dân trí)-Indonesia thừa nhận đang ở trong "kịch bản tồi tệ nhất" khi số ca nhiễm và tử vong vì Covid-19 tăng vọt do biến thể delta.</p>
+            <ul>
+                <li>Gần 1000 người chết vì Covid-19 trong ngày tại Indonesia</li>
+                <li>Lý do khiến Indonesia thành ổ dịch Covid-19 lớn nhất Đông Nam Á</li>
+                <li>Bi kịch bệnh nhân Covid-19 Indonesia lìa đời tại nhà giữa "cơn khát "ôxy</li>
+            </ul>
+        </div>
+        <div class="middle">
+            <b>Tin Tức sự kiện</b>
+            <ul>
+                <li>Thủ tướng triệu tập họp với 27 tỉnh thành đang "nóng' dịch covid-19</li>
+                <li>Nghị quyết 68/ND-CP ngoài khoản hỗ trợ còn là sự đọng viên, chia sẻ</li>
+                <li>Hàng trăm người chờ mua hàng hóa ở TPHCM "rất cang thẳng" vì có tin đồn</li>
+                <li>9 nhân sự trung ương giới thiệu không trúng cử đại biểu Quốc hội</li>
+                <li>TPHCM phân công lại nhiệm vụ của Phó chủ tịch Võ Văn Hoan</li>
+                <li>Hơn 921.000 liều vắc xin AstraZeneca vừa "hạ cánh" xuống Tân Sơn Nhất</li>
+                <li>Mỹ lo sốt vó khi "quái vật" Covid-19 bùng phát trở lại</li>
+                <li>Lộ trình lựa chọn, thí điểm sáp nhập các tỉnh như thế nào?</li>
+                <li>Hà Nội: Ghi nhận liên tiếp 7 ca dương tính SART-Cov-2 trong buổi sáng</li>
+                <li>Động thái đáng ngờ từ 2 cận vệ hàng đầu của Tổng thống Haiti bị ám sát</li>
+            </ul>
+            <img src="imgs/anh-5.png" alt="Image 2">
+            <p>Bệnh viện tư nhân tại An Giang cung cấp dịch vụ tiêm vaccine Covid-19</p>
+        </div>
+        <div class="right">
+            <img src="anh-9 (1).png" alt="Image 3">
+            <img src="anh-8 (2).png" alt="Image 4">
+            <img src="anh-6 (1).png" alt="Image 5">
+            <img src="anh-7 (1).png" alt="Image 6">
+        </div>
+    </div>
+</body>
+</html>

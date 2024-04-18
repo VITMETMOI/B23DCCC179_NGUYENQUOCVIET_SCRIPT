@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function findMaxInteger(array) {
+            if (array.length === 0) {
+                return null;
+            }
+            let max = array[0];
+            for (let i = 1; i < array.length; i++) {
+                if (Number.isInteger(array[i]) && array[i] > max) {
+                    max = array[i];
+                }
+            }
+            return max;
+        }
+
+        function isPerfectSquare(num) {
+            return Math.sqrt(num) % 1 === 0;
+        }
+
+        function findPerfectSquares(array) {
+            return array.filter(num => Number.isInteger(num) && isPerfectSquare(num));
+        }
+
+        function averageNonNegativeNumbers(array) {
+            const nonNegativeNumbers = array.filter(num => num >= 0 && typeof num === 'number');
+            if (nonNegativeNumbers.length === 0) {
+                return 0;
+            }
+            const sum = nonNegativeNumbers.reduce((acc, curr) => acc + curr, 0);
+            return sum / nonNegativeNumbers.length;
+        }
+
+        function findNumbersGreaterThanAverage(array) {
+            const average = averageNonNegativeNumbers(array);
+            return array.filter(num => num > average);
+        }
+
+        const integerArray = [0, -1, -100, 3, 7, 12, 16, 25, 36, 49, 64, 81];
+
+        document.write("Số nguyên lớn nhất trong mảng:", findMaxInteger(integerArray));
+        document.write("<br>");
+        document.write("Các số chính phương trong mảng:", findPerfectSquares(integerArray));
+        document.write("<br>");
+
+        document.write("Các số lớn hơn trung bình cộng của mảng:", findNumbersGreaterThanAverage(integerArray));
+        document.write("<br>");
+
+        document.write("Trung bình cộng của các số không âm trong mảng:", averageNonNegativeNumbers(integerArray));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

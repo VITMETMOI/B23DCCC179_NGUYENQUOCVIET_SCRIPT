@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            width: 1000px;
+            margin:auto;
+        }
+        .box {
+            display: inline-block;
+            margin-right: 0px;
+            vertical-align: top;
+        }
+        .menuline1 {
+            background-color: rgb(90, 158, 255);
+            height: 30px;
+            line-height: 30px;
+        }
+        .menuline1 a {
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        .menuline1 a:not(:last-child) {
+            border-right: 1px solid white;
+        }
+        .menuline2 {
+            background-color: rgb(238, 238, 238);
+            height: 40px;
+            line-height: 40px;
+        }
+        .ulmenuline2 {
+            padding: 0;
+            margin: 0px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ulmenuline2 li {
+            list-style-type: none;
+        }
+        .ulmenuline2 li a {
+            font-size: 16px;
+        }
+        .custom-input {
+            width: 250px; 
+            font-size: 16px; 
+        }
+        .left {
+            width: 150px;
+        }
+        .navleft div {
+            background-color: rgb(90, 158, 255);
+        }
+        .ulleft {
+            margin: 0;
+            padding: 0;
+        }
+        .ulleft li {
+            list-style-type: none;
+        }
+        .ulleft li a {
+            text-decoration: none;
+        }
+        .ulleft li img {
+            width: 100%;
+        }
+        .center1 , .center2 {
+            width: 350px;
+        }
+        .right {
+            width: 250px;
+        }
+        .center1 , .center2 {
+            display: inline-block;
+            margin-right: 0px;
+            vertical-align: top;
+        }
+        .textimg {
+            display: flex;
+            align-items: center;
+        }
+   
+    </style>
+</head>
+<body>
+    <table>
+        <div class="menuline1">
+            <a href="">Giới thiệu</a>
+            <a href="">Tin tức</a>
+            <a href="">Thành viên</a>
+            <a href="">Thống kê</a>
+            <a href="">Thăm dò ý kiến</a>
+            <a href="">Tìm kiếm</a>
+            <a href="">Liên hệ</a>
+        </div>
+        <div class="menuline2">
+            <nav>
+                <ul class="ulmenuline2">
+                    <li><a>Thứ năm, 20/6/2333, 10:00</a></li>
+                    <li><input type="text" class="custom-input" placeholder="Tìm kiếm..." /></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="box" style="width:150px">
+            <div class="left">
+                <nav class="navleft">
+                    <div>
+                        <ul class="ulleft">
+                            <li><a href="#">Tin tức</a></li>
+                            <li><a href="#">Sản phẩm</a></li>
+                            <li><a href="#">Đối tác</a></li>
+                            <li><a href="#">Tuyển dụng</a></li>
+                        </ul>
+                    </div>
+                    <ul class="ulleft">
+                        <li><img src="imgs/anh-1.png" alt=""/></li>
+                        <li><img src="imgs/anh-2.png" alt=""/></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="box" style="width:650px">
+            <div class="center1" style="width:350px">
+                <img src="imgs/anh-10.jpeg" alt="" width="100%" height="100%"/>
+                <h4>Học lập trình tại Zent có gì mới?</h4>
+                <p>
+                    Phương pháp học tập hoàn toàn mới, với đội ngũ giảng viên, trợ giảng nhiệt tình mang lại nhiều kiến thức bổ ích cho học viên. Bên cạnh đó , Zent còn hỗ trợ tối đa việc làm cho học viên sau khi tốt nghiệp.
+                </p>
+            </div>
+            
+            <div class="center1" style="width:290px">
+                <div class="textimg">
+                    <p>*Hãy trở thành đối tác của Zent</p>
+                    <img src="imgs/anh-3.png" alt="" width="40%" height="30%"/>
+                </div>
+                <div class="textimg">
+                    <p>*Học viên Zent đã làm việc tại đâu</p>
+                    <img src="imgs/anh-4.png" alt="" width="40%" height="30%"/>
+                </div><div class="textimg">
+                    <p>*Tuyển dụng kĩ sư lập trình CNTT</p>
+                    <img src="imgs/anh-5.png" alt="" width="40%" height="30%"/>
+                </div><div class="textimg">
+                    <p>*Khóa học lập trình C cơ bản miễn phí</p>
+                    <img src="imgs/anh-6.png" alt="" width="40%" height="30%"/>
+                </div>
+                <div class="textimg">
+                    <p>*Hãy trở thành đối tác của Zent</p>
+                    <img src="imgs/anh-7.png" alt="" width="40%" height="30%"/>
+                </div>
+            </div>
+            
+            <img src="imgs/anh-9.png" alt="" width="100%" height="100%"/>
+            <h3 style="background-color: rgb(238, 238, 238)">Tin tức hợp tác</h3>
+            
+            <div class="center2" style="width:350px">
+                <div class="textimg">
+                    <img src="imgs/anh-3.png" alt="" width="30%" height="30%"/>
+                    <h4>Zent kí hợp tác với các công ty công nghệ</h4>
+                </div>
+                <div>
+                    <p>
+                        Mới đây , Zent đã có hành động kí kết hợp tác đào tạo nhân sự công nghệ thông tin
+                        cho các đối tác trong lĩnh vực công nghệ thông tin ,
+                        nhằm thúc đẩy nguồn nhân lực CNTT
+                    </p>
+                </div>
+            </div>
+            <div class="center2" style="width:290px">
+                <div class="textimg">
+                    <p>*Hãy trở thành đối tác của Zent</p>
+                    <img src="imgs/anh-3.png" alt="" width="30%" height="30%"/>
+                </div>
+                <div class="textimg">
+                    <p>*Hãy trở thành đối tác của Zent</p>
+                    <img src="imgs/anh-4.png" alt="" width="30%" height="30%"/>
+                </div>
+                <div class="textimg">
+                    <p>*Hãy trở thành đối tác của Zent</p>
+                    <img src="imgs/anh-7.png" alt="" width="30%" height="30%"/>
+                </div>
+            </div>
+        
+        
+        </div>
+        <div class="box" style="width:200px">
+            <p>
+            ZENT EDUCATION được thành lập với triết lí 
+            "Không cứ phải là thần đồng ,không cứ phải là giàu 
+            có chỉ cần có phương pháp giáo dục đúng đắn ,tích cực 
+            mọi lứa đứa trẻ đều trở thành nhân tài" được viết trong
+            cuốn sách nổi tiếng "em phải đến Harvard học kinh tế"
+            </p>
+            <img src="imgs/anh-8.png" alt="" width="100%" height="100%"/>
+            <img src="imgs/anh-2.png" alt="" width="100%" height="100%"/>
+        </div>
+    </table>
+</body>
+</html>
+            
