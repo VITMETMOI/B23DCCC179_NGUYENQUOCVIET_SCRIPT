@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  #slider-wrapper {
+    position: relative;
+    margin: 0 auto;
+    display: inline-block; /* Đảm bảo slider không tự động co dãn */
+  }
+
+  #slider {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .slide {
+    display: none; /* Ẩn tất cả các slide ban đầu */
+  }
+
+  .slide:first-child {
+    display: inline-block; /* Hiển thị slide đầu tiên */
+    vertical-align: middle;
+  }
+
+  #controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    display: flex;
+    justify-content: space-between; /* Căn các nút ở hai bên xa nhau */
+    width: 100%; /* Đảm bảo nút chuyển tiếp căn giữa */
+  }
+
+  #prevBtn,
+  #nextBtn {
+    width: 30px;
+  }
+
+</style>
+</head>
+<body>
+  <div id="slider-wrapper">
+    <div id="slider">
+      <div class="slide">
+        <img id="slideImg" src="https://img1.kienthucvui.vn/uploads/2019/10/09/anh-bau-troi-hoang-hon-rat-dep_042055556.jpg" alt="Slide 1" width="600" height="400">
+      </div>
+    </div>
+    <div id="controls">
+      <button id="prevBtn">&lt;</button>
+      <button id="nextBtn">&gt;</button>
+    </div>
+  </div>
+<script>
+$(document).ready(function(){
+    var currentSlide = 0;
+    var totalSlides = $(".slide").length;
+
+    function showSlide(index) {
+        $(".slide").hide();
+        $(".slide").eq(index).show();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    $("#nextBtn").click(function(){
+        nextSlide();
+    });
+
+    $("#prevBtn").click(function(){
+        prevSlide();
+    });
+
+    // Tự động trượt slide sau 5 giây
+    setInterval(function() {
+        nextSlide();
+    }, 5000);
+
+    // Thiết lập chiều rộng của slider bằng với chiều rộng của ảnh
+    var slideWidth = $("#slideImg").width();
+    $("#slider").width(slideWidth);
+});
+</script>
+</body>
+</html>

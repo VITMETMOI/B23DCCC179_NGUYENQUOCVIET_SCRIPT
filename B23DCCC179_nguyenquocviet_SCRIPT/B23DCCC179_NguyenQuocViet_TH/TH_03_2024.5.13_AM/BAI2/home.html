@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add New Item</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<h3>List Item</h3>
+<ul id="itemList"></ul>
+<div>
+  <input type="text" id="newItemInput">
+  <button id="addItemBtn">Add</button>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#addItemBtn").click(function(){
+            var newItemValue = $("#newItemInput").val().trim();
+            if(newItemValue !== "") {
+                $("#itemList").append("<li>" + newItemValue + "</li>");
+                $("#newItemInput").val(""); // Xoá trắng ô input
+            }
+        });
+    });
+</script>
+</body>
+</html>
